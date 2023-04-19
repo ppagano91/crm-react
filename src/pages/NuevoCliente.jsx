@@ -5,8 +5,11 @@ import Formulario from "../components/Formulario";
 /*
   Equivalente a una petición POST
  */
-export function action() {
-  console.log("Submit Formulario");
+export async function action({ request }) {
+  const formData = await request.formData();
+  const datos = Object.fromEntries(formData);
+  console.log(datos);
+  return null;
 }
 
 const NuevoCliente = () => {
@@ -20,7 +23,7 @@ const NuevoCliente = () => {
       <div className="flex justify-end">
         <button
           className="bg-blue-800 text-white px-3 py-1 font-bold uppercase"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate()}
         >
           Volver
         </button>
@@ -30,7 +33,7 @@ const NuevoCliente = () => {
           <Formulario />
           <input
             type="submit"
-            className="mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg"
+            className="mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg cursor-pointer"
             value="Registrar Cliente"
           />
         </Form>

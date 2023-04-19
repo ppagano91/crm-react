@@ -2,7 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import React from "react";
 import Cliente from "../components/Cliente";
 
-// El "loader" ejecuta cuando el componente cargue: IDEAL para cargar un State o consultar una API y obtener un resultado para mostrar en el componente
+/*
+  El "loader" ejecuta cuando el componente cargue: IDEAL para cargar un State o consultar una API y obtener un resultado para mostrar en el componente
+  La función loader() es como una petición GET
+*/
 export function loader() {
   const clientes = [
     {

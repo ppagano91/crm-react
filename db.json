@@ -34,6 +34,14 @@
       "telefono": 1398198938,
       "email": "pedro@juan.com",
       "empresa": "Codigo Con Juan"
+    },
+    {
+      "nombre": "Patricio",
+      "empresa": "Geosystems",
+      "email": "patricio.pagano@geosystems.com.ar",
+      "telefono": "29123456789",
+      "notas": "Hola Mundo!",
+      "id": 6
     }
   ]
 }

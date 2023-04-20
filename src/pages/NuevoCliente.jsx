@@ -1,7 +1,8 @@
 import React from "react";
-import { useNavigate, Form, useActionData } from "react-router-dom";
+import { useNavigate, Form, useActionData, redirect } from "react-router-dom";
 import Formulario from "../components/Formulario";
 import Error from "../components/Error";
+import { agregarCliente } from "../data/clientes";
 
 /*
   Equivalente a una petición POST
@@ -32,7 +33,8 @@ export async function action({ request }) {
     return errores;
   }
 
-  return null;
+  await agregarCliente(datos);
+  return redirect("/");
 }
 
 const NuevoCliente = () => {
@@ -50,7 +52,7 @@ const NuevoCliente = () => {
       <div className="flex justify-end">
         <button
           className="bg-blue-800 text-white px-3 py-1 font-bold uppercase"
-          onClick={() => navigate()}
+          onClick={() => navigate(-1)}
         >
           Volver
         </button>

@@ -1,6 +1,15 @@
+import { obtenerCliente } from "../data/clientes";
+
 export async function loader({ params }) {
-  console.log(params);
-  return null;
+  const cliente = await obtenerCliente(params.clienteId);
+  if (Object.values(cliente).length === 0) {
+    throw new Response("", {
+      status: 404,
+      statusText: `Cliente no encontrado. No existe cliente con id: ${params.clienteId}`,
+    });
+  }
+
+  return cliente;
 }
 
 const EditarCliente = () => {

@@ -13,7 +13,7 @@ export async function agregarCliente(datos){
       headers: {'Content-type':'application/json'}});      
       return await respuesta.json();      
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }  
 }
 
@@ -22,4 +22,17 @@ export async function obtenerCliente(id) {
   const resultado = await respuesta.json();
 
   return resultado;
+}
+
+export async function actualizarCliente(id, datos){
+  try {    
+    const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, 
+      {method: 'PUT',
+      body: JSON.stringify(datos),
+      headers: {'Content-type':'application/json'}});      
+      return await respuesta.json();      
+  } catch (error) {
+    console.error(error);
+  }  
+
 }

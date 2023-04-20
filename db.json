@@ -2,8 +2,8 @@
   "clientes": [
     {
       "nombre": "Juan",
-      "empresa": "Codigo Con Juan",
-      "email": "juan@juan.com",
+      "empresa": "Company SA",
+      "email": "juan@mail.com",
       "telefono": "102013313",
       "notas": "Nota Actualizada",
       "id": 1
@@ -12,29 +12,29 @@
       "id": 2,
       "nombre": "Karen",
       "telefono": 138198313,
-      "email": "karen@juan.com",
-      "empresa": "Codigo Con Juan"
+      "email": "karen@mail.com",
+      "empresa": "Company SA"
     },
     {
       "id": 3,
       "nombre": "Josue",
       "telefono": 31983913,
-      "email": "josue@juan.com",
-      "empresa": "Codigo Con Juan"
+      "email": "josue@mail.com",
+      "empresa": "Company SA"
     },
     {
       "id": 4,
       "nombre": "Miguel",
       "telefono": 319381983,
-      "email": "miguel@juan.com",
-      "empresa": "Codigo Con Juan"
+      "email": "miguel@mail.com",
+      "empresa": "Company SA"
     },
     {
       "id": 5,
       "nombre": "Pedro",
       "telefono": 1398198938,
-      "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
+      "email": "pedro@mail.com",
+      "empresa": "Company SA"
     }
   ]
 }
